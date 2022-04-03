@@ -1,0 +1,15 @@
+C:\Users\josei\Desktop\odonto-facisa\bin\Debug\net6.0\odonto-facisa.exe
+C:\Users\josei\Desktop\odonto-facisa\bin\Debug\net6.0\odonto-facisa.deps.json
+C:\Users\josei\Desktop\odonto-facisa\bin\Debug\net6.0\odonto-facisa.runtimeconfig.json
+C:\Users\josei\Desktop\odonto-facisa\bin\Debug\net6.0\odonto-facisa.dll
+C:\Users\josei\Desktop\odonto-facisa\bin\Debug\net6.0\odonto-facisa.pdb
+C:\Users\josei\Desktop\odonto-facisa\obj\Debug\net6.0\odonto-facisa.csproj.AssemblyReference.cache
+C:\Users\josei\Desktop\odonto-facisa\obj\Debug\net6.0\odonto-facisa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josei\Desktop\odonto-facisa\obj\Debug\net6.0\odonto-facisa.AssemblyInfoInputs.cache
+C:\Users\josei\Desktop\odonto-facisa\obj\Debug\net6.0\odonto-facisa.AssemblyInfo.cs
+C:\Users\josei\Desktop\odonto-facisa\obj\Debug\net6.0\odonto-facisa.csproj.CoreCompileInputs.cache
+C:\Users\josei\Desktop\odonto-facisa\obj\Debug\net6.0\odonto-facisa.dll
+C:\Users\josei\Desktop\odonto-facisa\obj\Debug\net6.0\refint\odonto-facisa.dll
+C:\Users\josei\Desktop\odonto-facisa\obj\Debug\net6.0\odonto-facisa.pdb
+C:\Users\josei\Desktop\odonto-facisa\obj\Debug\net6.0\odonto-facisa.genruntimeconfig.cache
+C:\Users\josei\Desktop\odonto-facisa\obj\Debug\net6.0\ref\odonto-facisa.dll
