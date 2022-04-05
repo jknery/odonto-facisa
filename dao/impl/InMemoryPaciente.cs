@@ -11,24 +11,24 @@ namespace odonto_facisa.dao.impl
     {
         private List<Paciente> pacientes = new();
 
-        public void delete(string id)
+        public override void delete(Paciente entidade)
         {
-            throw new NotImplementedException();
+            this.pacientes.Remove(entidade);
         }
 
-        public Paciente Get(string cpf)
+        public override Paciente Get(string cpf)
         {
             var Exist = this.pacientes.Find(paciente => paciente.Cpf.Equals(cpf));
 
             return Exist != null ? Exist : throw new Exception("Não foi possivel encontrar o Paciente com o CPF:" + cpf);
         }
 
-        public List<Paciente> GetAll()
+        public override List<Paciente> GetAll()
         {
             return this.pacientes;
         }
 
-        public void Save(Paciente entidade)
+        public override void Save(Paciente entidade)
         {
             this.pacientes.Add(entidade);
         }

@@ -1,4 +1,5 @@
-﻿using odonto_facisa.dao;
+﻿using odonto_facisa.controller.impl;
+using odonto_facisa.dao;
 using odonto_facisa.dao.impl;
 using odonto_facisa.models;
 using System;
@@ -11,38 +12,36 @@ namespace odonto_facisa.controller
 {
     internal class Controller    {
 
-        InMemory<Paciente> pacienteMemory = new InMemoryPaciente();
+        private static View<Paciente> viewPaciente = new ViewPaciente();
 
-        public static int SelectAction(int opcao)
+        private static View<Procedimento> viewProcedimento = new ViewProcedimento();
+
+        private static View<Atendimento> viewAtendimento = new ViewAtendimento(viewPaciente.getRepository(), viewProcedimento.getRepository());
+
+        public static void SelectAction(int opcao)
         {
             switch (opcao)
             {
                 case 1:
-                    Console.WriteLine("Cadastrar Pacientes1");
-
+                    viewPaciente.ShowMenuSave();
                     break;
 
                 case 2:
-                    Console.WriteLine("Cadastrar Pacientes2");
-
+                    viewProcedimento.ShowMenuSave();
                     break;
 
                 case 3:
                     Console.WriteLine("Cadastrar Pacientes3");
-
                     break;
 
                 case 4:
                     Console.WriteLine("Cadastrar Pacientes4");
-
                     break;
 
                 case 5:
                     break;
 
             }
-
-            return opcao;
 
         }
 
@@ -68,6 +67,16 @@ namespace odonto_facisa.controller
             }while(opcao < 1 || opcao > 5);
 
             return opcao;
+        }
+
+        public static char modalWannaGoOut()
+        {
+            Console.Clear();
+            Console.WriteLine("###############################################");
+            Console.WriteLine("##              OdontoFacisa                 ##");
+            Console.WriteLine("##-------------------------------------------##");
+            Console.WriteLine("## Deseja Sair? (S)im | (N)ão                ##");
+            return Char.ToUpper(char.Parse(Console.ReadLine()));
         }
 
    

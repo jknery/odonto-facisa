@@ -8,15 +8,15 @@ using odonto_facisa.models;
 
 namespace odonto_facisa.dao
 {
-    public interface InMemory<T>
+    public abstract class InMemory<T>
     {
 
-        void Save(T entidade);
+        public abstract void Save(T entidade);
 
-        T Get(string id);
+        public abstract T Get(string id);
 
-        List<T> GetAll();
+        public abstract List<T> GetAll();
 
-        void delete(string id);
+        public abstract void delete(T entidade);
     }
 }

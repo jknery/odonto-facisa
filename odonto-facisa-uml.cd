@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="odonto_facisa.controller.View&lt;T&gt;">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAACAQAA=</HashCode>
+      <FileName>controller\View.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="odonto_facisa.controller.impl.ViewPaciente">
+    <Position X="1.75" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAAAAACAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAACAQAA=</HashCode>
+      <FileName>controller\impl\ViewPaciente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

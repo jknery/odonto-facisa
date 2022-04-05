@@ -23,5 +23,9 @@ namespace odonto_facisa.models
             this.Procedimentos = procedimentos;
             this.Paciente = paciente;
         }
+
+        public Atendimento()
+        {
+        }
     }
 }

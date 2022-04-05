@@ -26,10 +26,11 @@ namespace odonto_facisa.models
             this.Atendimentos = new List<Atendimento>();
         }
 
-        public static void MenuCadastrarPaciente()
+        public Paciente(string? cpf, string? telefone, string? nome)
         {
-
-
+            this.cpf = cpf;
+            this.telefone = telefone;
+            this.nome = nome;
         }
     }
 }
