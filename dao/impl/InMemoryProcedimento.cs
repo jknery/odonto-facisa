@@ -20,7 +20,12 @@ namespace odonto_facisa.dao.impl
         {
             var exists = procedimentos.Find(pr => pr.Codigo.Equals(codigo));
 
-            return exists != null ? exists : throw new Exception("Não foi possivel encontrar o Procedimento com o CÓDIGO:" + codigo);
+            if (exists == null)
+            {
+                throw new Exception("Não foi possivel encontrar o Procedimento com o CÓDIGO:" + codigo);
+            }
+
+            return exists;
         }
 
         public override List<Procedimento> GetAll()

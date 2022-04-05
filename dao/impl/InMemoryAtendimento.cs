@@ -16,11 +16,18 @@ namespace odonto_facisa.dao.impl
            atendimentos.Remove(entidade);
         }
 
-        public override Atendimento Get(string id)
+     /*   public override Atendimento Get(string id)
         {
             var exists = atendimentos.Find(at => at.Id.Equals(id));
 
            return exists != null ? exists : throw new Exception("Não foi possivel encontrar o Atendimento com o ID:" + id);
+        }*/
+
+        public override Atendimento Get(string cpf)
+        {
+            var exists = atendimentos.Find(at => at.Paciente.Cpf.Equals(cpf));
+
+            return exists != null ? exists : throw new Exception("Não foi possivel encontrar o Histórico com o CPF:" + cpf);
         }
 
         public override List<Atendimento> GetAll()

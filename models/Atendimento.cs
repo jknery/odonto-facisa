@@ -27,5 +27,11 @@ namespace odonto_facisa.models
         public Atendimento()
         {
         }
+
+        public void ToString()
+        {
+            Console.WriteLine("## Data do Atendimento\t|\tCódigo\t|\tNome\t|\tPreço (R$)\t##");
+            //Console.WriteLine("## %s\t%s\t%s\t%.2f", this.DateAtendimento, this.);
+        }
     }
 }

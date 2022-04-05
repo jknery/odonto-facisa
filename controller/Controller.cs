@@ -31,7 +31,7 @@ namespace odonto_facisa.controller
                     break;
 
                 case 3:
-                    Console.WriteLine("Cadastrar Pacientes3");
+                    viewAtendimento.ShowMenuSave();
                     break;
 
                 case 4:
