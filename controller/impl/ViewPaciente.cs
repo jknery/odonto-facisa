@@ -41,7 +41,7 @@ namespace odonto_facisa.controller.impl
 
             Console.WriteLine("##-------------------------------------------##");
             Console.WriteLine("## Digite o Nome do Paciente?                ##");
-            nome = Console.ReadLine();
+            nome = Console.ReadLine().Chunk(16).ToString();
 
             Console.WriteLine("##-------------------------------------------##");
             Console.WriteLine("## Digite o Telefone do Paciente?            ##");

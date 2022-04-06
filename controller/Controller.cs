@@ -35,10 +35,12 @@ namespace odonto_facisa.controller
                     break;
 
                 case 4:
-                    Console.WriteLine("Cadastrar Pacientes4");
+                    ViewAtendimento.getHistoryByCpf();
+                    Console.ReadKey();
                     break;
 
                 case 5:
+                    Environment.Exit(0);
                     break;
 
             }
@@ -62,7 +64,8 @@ namespace odonto_facisa.controller
                 Console.WriteLine("## 5 - Sair                                  ##");
                 Console.WriteLine("##-------------------------------------------##");
                 Console.WriteLine("## Digite a opção escolhida: ");
-                opcao = int.Parse(Console.ReadLine());
+                var test = Console.ReadLine();
+                opcao = test != null ? int.Parse(test) : 0;
 
             }while(opcao < 1 || opcao > 5);
 
@@ -76,7 +79,8 @@ namespace odonto_facisa.controller
             Console.WriteLine("##              OdontoFacisa                 ##");
             Console.WriteLine("##-------------------------------------------##");
             Console.WriteLine("## Deseja Sair? (S)im | (N)ão                ##");
-            return Char.ToUpper(char.Parse(Console.ReadLine()));
+            var test = Console.ReadLine();
+            return test != null ? Char.ToUpper(char.Parse(test)) : 'N';
         }
 
    

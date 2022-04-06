@@ -8,6 +8,8 @@ namespace odonto_facisa.models
 {
     internal class Atendimento
     {
+        private List<Historico> list;
+
         public string Id { get; set; }
 
         public string DateAtendimento { get; set; }
@@ -28,10 +30,16 @@ namespace odonto_facisa.models
         {
         }
 
-        public void ToString()
+        public List<Historico> GetHistorico()
         {
-            Console.WriteLine("## Data do Atendimento\t|\tCódigo\t|\tNome\t|\tPreço (R$)\t##");
-            //Console.WriteLine("## %s\t%s\t%s\t%.2f", this.DateAtendimento, this.);
+            list = new List<Historico>();
+
+            Procedimentos.ForEach(p => {
+                list.Add(new Historico(DateAtendimento, Paciente.Nome, p.Codigo, (double)p.Preco));
+            });
+
+            return list;
         }
+
     }
 }

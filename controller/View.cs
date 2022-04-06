@@ -18,6 +18,10 @@ namespace odonto_facisa.controller
         public abstract void ShowMenuDelete();
 
         public abstract InMemory<T> getRepository();
+        public static void getHistoryByCpf() { }
+
+        //public abstract void getHistoryByCpf();
+
     }
 }
 

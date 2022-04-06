@@ -39,7 +39,7 @@ namespace odonto_facisa.controller.impl
             throw new NotImplementedException();
         }
 
-        public static void getHistoryByCpf()
+        public static new void getHistoryByCpf()
         {
             String cpf;
             char opcao;
@@ -59,6 +59,7 @@ namespace odonto_facisa.controller.impl
                 try
                 {
                     atendimento = atendimentoMemory.Get(cpf);
+                    mountHistorico(atendimento);
                     opcao = 'N';
                 }
                 catch (Exception ex)
@@ -78,8 +79,22 @@ namespace odonto_facisa.controller.impl
             Console.WriteLine("##############################################################################################");
             Console.WriteLine("##                            OdontoFacisa - Histórico de Atendimento                       ##");
             Console.WriteLine("##------------------------------------------------------------------------------------------##");
-            Console.WriteLine("## Data do Atendimento   |    Código      |        Nome        |     Preço (R$)             ##");
+            Console.WriteLine("## Data do Atendimento     Código           Nome             Preço (R$)                     ##");
+            mountHistByHist(atendimento);
+            Console.WriteLine(string.Format("## Total R$: {0}                                                                            ##", getTotalProcedimentos(atendimento)));
+            Console.WriteLine("##------------------------------------------------------------------------------------------##");
+        }
 
+        private static void mountHistByHist(Atendimento? atendimento)
+        {
+            atendimento.GetHistorico().ForEach(hist => {
+                Console.WriteLine(string.Format("##    {0}          {1}    {2}          {3}                       ##", hist.Data, hist.Codigo, hist.Nome, hist.Valor));
+             });
+        }
+
+        private static double getTotalProcedimentos(Atendimento? atendimento)
+        {
+            return (double)atendimento.Procedimentos.Sum(p => p.Preco);
         }
 
         public override void ShowMenuSave()

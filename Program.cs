@@ -7,6 +7,8 @@ using odonto_facisa.controller;
 int opcao = 0;
 const char NAO = 'N';
 
+
+
 do
 {
     opcao = Controller.ShowMenuPrincipal();
@@ -14,7 +16,3 @@ do
     Controller.SelectAction(opcao);
 
 } while (Controller.modalWannaGoOut().Equals(NAO));
-
-
-
-
